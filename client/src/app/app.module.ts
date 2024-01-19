@@ -8,6 +8,9 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { DishesPageComponent } from './pages/dishes-page/dishes-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginPageComponent,
     SignUpPageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FavoritesPageComponent,
+    ProfilePageComponent,
+    DishesPageComponent
   ],
   imports: [
     BrowserModule,

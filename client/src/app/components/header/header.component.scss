@@ -1,3 +1,58 @@
 .header {
-  padding: 20px 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(93, 135, 31, 0.2);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    color: #fff;
+    font-size: 20px;
+    user-select: none;
+    font-weight: 500;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      list-style: none;
+      text-transform: uppercase;
+
+      &-item {
+        cursor: pointer;
+        color: #fff;
+      }
+
+      &-link {
+        color: #fff;
+        padding: 6px 12px;
+      }
+    }
+  }
+
+  &__sub-nav {
+    position: relative;
+    
+
+    &-item {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      z-index: -20;
+      transform: translateY(110%);
+      transition: all 0.3s;
+    }
+
+    &:hover &-item {
+      z-index: 1;
+      transform: translateY(0);
+    }
+  }
 }
