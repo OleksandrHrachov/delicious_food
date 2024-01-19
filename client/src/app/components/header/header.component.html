@@ -1,1 +1,25 @@
-<header class="container header">header</header>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" routerLink="/">Delicious Food</a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-list-item">
+          <a routerLink="/dishes" class="header__nav-list-link">Dishes</a>
+        </li>
+        <li class="header__nav-list-item header__sub-nav">
+          <span class="header__nav-list-link">User &#8681;</span>
+          <div class="header__sub-nav-item">
+            <a routerLink="/profile" class="header__nav-list-link">Profile</a>
+            <a routerLink="/favorites" class="header__nav-list-link"
+              >Favorites</a
+            >
+          </div>
+        </li>
+        <li class="header__nav-list-item">
+          <a *ngIf="isAuth; else loginLinkBlock" routerLink="/login" class="header__nav-list-link">LogOut</a>
+          <ng-template #loginLinkBlock><a routerLink="/" class="header__nav-list-link">Login</a></ng-template>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
