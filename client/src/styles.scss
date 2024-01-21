@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
 
+:root {
+  --chestnut-300: #EBE8D6;
+  --chestnut-400: #DBD7B9;
+  --chestnut-500: #B6B292;
+  --chestnut-800: #252525;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +20,7 @@ html, body {
 body {
   font-family: 'Jost', 'sans-serif';
   font-size: 16px;
+  color: var(--chestnut-800);
 }
 
 app-root {
@@ -35,5 +43,23 @@ a {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--chestnut-500) !important;
+  font-size: 50px !important;
+}
+
+.slick-next {
+  right: 50px !important;
+  height: 50px !important;
+  width: 50px !important;
+}
+
+.slick-prev {
+  left: 50px !important;
+  z-index: 10;
+  height: 50px !important;
+  width: 50px !important;
 }
