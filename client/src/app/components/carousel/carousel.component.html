@@ -1,0 +1,33 @@
+<ngx-slick-carousel
+  class="carousel home-page__carousel"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <a
+    ngxSlickItem
+    class="home-page__carousel-slide"
+    *ngFor="let slide of slides; trackBy: trackByFn"
+    [routerLink]="['dish', slide.title.toLocaleLowerCase().split(' ').join('-')]"
+  >
+    <img
+      class="home-page__carousel-slide-image"
+      src="{{ slide.imageUrl }}"
+      alt="slide"
+      width="100%"
+    />
+    <div class="home-page__carousel-slide-info">
+      <p class="home-page__carousel-slide-info-title">{{ slide.title }}</p>
+      <p class="home-page__carousel-slide-info-descr">
+        {{ slide.description }}
+      </p>
+      <div class="home-page__carousel-slide-info-characteristic">
+        <p class="home-page__carousel-slide-info-characteristic-time">
+          {{ slide.cookingTime }} {{ slide.cookingTime > 1 ? "hours" : "hour" }}
+        </p>
+        <p class="home-page__carousel-slide-info-characteristic-calories">
+          {{ slide.nutritionalValue.calories }} kсal
+        </p>
+      </div>
+    </div>
+  </a>
+</ngx-slick-carousel>

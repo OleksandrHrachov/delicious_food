@@ -6,6 +6,7 @@ import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component
 import { DishesPageComponent } from './pages/dishes-page/dishes-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
+import { DishPageComponent } from './pages/dish-page/dish-page.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'dishes',
     component: DishesPageComponent,
+  },
+  {
+    path: 'dish/:id',
+    component: DishPageComponent,
   },
   {
     path: 'profile',

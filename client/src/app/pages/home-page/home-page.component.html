@@ -1,1 +1,59 @@
-<p>home-page works!</p>
+<section class="hero-section">
+  <img
+    class="hero-section__bg-image"
+    src="../../../assets/images/top-bg.png"
+    alt="bg-image"
+  />
+  <h1 class="hero-section__title">{{ "delicious food" | titlecase }}</h1>
+</section>
+<section class="care-section">
+  <p class="care-section__text">
+    A healthy home-cooked meal with plenty of vegetables that comes straight
+    from the ingredients.
+  </p>
+  <div class="care-section__img-wrapper">
+    <img
+      class="care-section__img"
+      src="../../../assets/images/meal-1.png"
+      alt="meal-1"
+    />
+  </div>
+  <p class="care-section__text">
+    We want you to take care of your body and mind. Even easier. More delicious.
+    More fun.I hope you continue to have a healthy diet
+  </p>
+</section>
+<section class="tasty-section">
+  <div class="tasty-section__top">
+    <h2 class="tasty-section__top-title">
+      {{ "healthy & tasty" | uppercase }}
+    </h2>
+    <p class="tasty-section__top-description">
+      You can mix and match as you like depending on the occasion and mood.
+    </p>
+    <p class="tasty-section__top-description">Over 40 original recipes.</p>
+  </div>
+  <div class="tasty-section__carousel">
+    <app-carousel></app-carousel>
+  </div>
+  <a routerLink="/dishes" class="tasty-section__link"
+    >{{ "All Dishes" | uppercase }} &#8680;</a
+  >
+</section>
+<section class="gallery-section">
+  <div class="gallery-section__images-line gallery-section__images-line-first">
+    <div *ngFor="let image of slides" class="gallery-section__image-wrapper">
+      <img class="gallery-section__img" src={{image.imageUrl}} alt={{image.title}}>
+    </div>
+  </div>
+  <div class="gallery-section__images-line gallery-section__images-line-second">
+    <div *ngFor="let image of slides" class="gallery-section__image-wrapper">
+      <img class="gallery-section__img" src={{image.imageUrl}} alt={{image.title}}>
+    </div>
+  </div>
+  <div class="gallery-section__images-line gallery-section__images-line-third">
+    <div *ngFor="let image of slides" class="gallery-section__image-wrapper">
+      <img class="gallery-section__img" src={{image.imageUrl}} alt={{image.title}}>
+    </div>
+  </div>
+</section>
