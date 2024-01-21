@@ -11,7 +11,7 @@ export class HomePageComponent {
     {
       id: '1',
       title: 'title 1',
-      imageUrl: '/assets/images/slide-1.png',
+      imageUrl: 'assets/images/slide-1.png',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis maiores pariatur, saepe perferendis facere possimus dicta recusandae quam inventore, iusto nisi! Dolore laborum quibusdam repellendus error sit repudiandae corrupti!',
       nutritionalValue: {
         proteins: 15,
@@ -26,7 +26,7 @@ export class HomePageComponent {
     {
       id: '2',
       title: 'title 2',
-      imageUrl: '/assets/images/slide-2.png',
+      imageUrl: 'assets/images/slide-2.png',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis maiores pariatur, saepe perferendis facere possimus dicta recusandae quam inventore, iusto nisi! Dolore laborum quibusdam repellendus error sit repudiandae corrupti!',
       nutritionalValue: {
         proteins: 15,
@@ -41,7 +41,7 @@ export class HomePageComponent {
     {
       id: '3',
       title: 'title 3',
-      imageUrl: '/assets/images/slide-3.png',
+      imageUrl: 'assets/images/slide-3.png',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis maiores pariatur, saepe perferendis facere possimus dicta recusandae quam inventore, iusto nisi! Dolore laborum quibusdam repellendus error sit repudiandae corrupti!',
       nutritionalValue: {
         proteins: 15,
@@ -56,7 +56,7 @@ export class HomePageComponent {
     {
       id: '4',
       title: 'title 4',
-      imageUrl: '/assets/images/slide-4.png',
+      imageUrl: 'assets/images/slide-4.png',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis maiores pariatur, saepe perferendis facere possimus dicta recusandae quam inventore, iusto nisi! Dolore laborum quibusdam repellendus error sit repudiandae corrupti!',
       nutritionalValue: {
         proteins: 15,
@@ -71,7 +71,7 @@ export class HomePageComponent {
     {
       id: '5',
       title: 'title 5',
-      imageUrl: '/assets/images/slide-5.png',
+      imageUrl: 'assets/images/slide-5.png',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis maiores pariatur, saepe perferendis facere possimus dicta recusandae quam inventore, iusto nisi! Dolore laborum quibusdam repellendus error sit repudiandae corrupti!',
       nutritionalValue: {
         proteins: 15,
@@ -86,7 +86,7 @@ export class HomePageComponent {
     {
       id: '6',
       title: 'title some',
-      imageUrl: '/assets/images/slide-6.png',
+      imageUrl: 'assets/images/slide-6.png',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis maiores pariatur, saepe perferendis facere possimus dicta recusandae quam inventore, iusto nisi! Dolore laborum quibusdam repellendus error sit repudiandae corrupti!',
       nutritionalValue: {
         proteins: 15,
@@ -101,7 +101,7 @@ export class HomePageComponent {
     {
       id: '7',
       title: '7 title',
-      imageUrl: '/assets/images/slide-7.png',
+      imageUrl: 'assets/images/slide-7.png',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis maiores pariatur, saepe perferendis facere possimus dicta recusandae quam inventore, iusto nisi! Dolore laborum quibusdam repellendus error sit repudiandae corrupti!',
       nutritionalValue: {
         proteins: 15,
@@ -116,7 +116,7 @@ export class HomePageComponent {
     {
       id: '8',
       title: 'title 9',
-      imageUrl: '/assets/images/slide-8.png',
+      imageUrl: 'assets/images/slide-8.png',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis maiores pariatur, saepe perferendis facere possimus dicta recusandae quam inventore, iusto nisi! Dolore laborum quibusdam repellendus error sit repudiandae corrupti!',
       nutritionalValue: {
         proteins: 15,
