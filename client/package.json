@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build",
+    "start-prod": "ng serve --configuration production --open",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "pre-deploy": "ng build --base-href \"https://oleksandrhrachov.github.io/delicious_food/\"",
