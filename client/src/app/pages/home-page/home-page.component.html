@@ -42,17 +42,17 @@
 </section>
 <section class="gallery-section">
   <div class="gallery-section__images-line gallery-section__images-line-first">
-    <div *ngFor="let image of slides" class="gallery-section__image-wrapper">
+    <div *ngFor="let image of firstSlidesLine" class="gallery-section__image-wrapper">
       <img class="gallery-section__img" src={{image.imageUrl}} alt={{image.title}}>
     </div>
   </div>
   <div class="gallery-section__images-line gallery-section__images-line-second">
-    <div *ngFor="let image of slides" class="gallery-section__image-wrapper">
+    <div *ngFor="let image of secondSlidesLine" class="gallery-section__image-wrapper">
       <img class="gallery-section__img" src={{image.imageUrl}} alt={{image.title}}>
     </div>
   </div>
   <div class="gallery-section__images-line gallery-section__images-line-third">
-    <div *ngFor="let image of slides" class="gallery-section__image-wrapper">
+    <div *ngFor="let image of thirdSlidesLine" class="gallery-section__image-wrapper">
       <img class="gallery-section__img" src={{image.imageUrl}} alt={{image.title}}>
     </div>
   </div>
