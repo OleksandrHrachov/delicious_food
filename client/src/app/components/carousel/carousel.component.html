@@ -9,12 +9,15 @@
     *ngFor="let slide of slides; trackBy: trackByFn"
     [routerLink]="['dish', slide.title.toLocaleLowerCase().split(' ').join('-')]"
   >
-    <img
+    <div class="home-page__carousel-slide-image-wrapper">
+      <img
       class="home-page__carousel-slide-image"
       src="{{ slide.imageUrl }}"
       alt="slide"
       width="100%"
     />
+    </div>
+    
     <div class="home-page__carousel-slide-info">
       <p class="home-page__carousel-slide-info-title">{{ slide.title }}</p>
       <p class="home-page__carousel-slide-info-descr">
