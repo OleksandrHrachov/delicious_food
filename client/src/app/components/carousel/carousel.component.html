@@ -7,17 +7,21 @@
     ngxSlickItem
     class="home-page__carousel-slide"
     *ngFor="let slide of slides; trackBy: trackByFn"
-    [routerLink]="['dish', slide.title.toLocaleLowerCase().split(' ').join('-')]"
+    [routerLink]="[
+      'dish',
+      slide.title.toLocaleLowerCase().split(' ').join('-') + '-' + slide._id
+    ]"
+    (click)="onSelectDish(slide)"
   >
     <div class="home-page__carousel-slide-image-wrapper">
       <img
-      class="home-page__carousel-slide-image"
-      src="{{ slide.imageUrl }}"
-      alt="slide"
-      width="100%"
-    />
+        class="home-page__carousel-slide-image"
+        src="{{ slide.imageUrl }}"
+        alt="slide"
+        width="100%"
+      />
     </div>
-    
+
     <div class="home-page__carousel-slide-info">
       <p class="home-page__carousel-slide-info-title">{{ slide.title }}</p>
       <p class="home-page__carousel-slide-info-descr">

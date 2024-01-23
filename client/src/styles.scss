@@ -30,13 +30,22 @@ app-root {
   position: relative;
 }
 
+app-dish-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 a {
   text-decoration: none;
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
+
 
 .container {
   min-width: 320px;
