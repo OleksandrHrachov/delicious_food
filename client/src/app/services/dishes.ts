@@ -10,6 +10,7 @@ import { BehaviorSubject, tap } from 'rxjs';
 export class DishesService {
   private dishesList$$ = new BehaviorSubject<IDish[]>([]);
   dishesList$ = this.dishesList$$.asObservable();
+  selectedDish!: IDish;
 
   constructor(private http: HttpClient) {}
 
@@ -17,5 +18,13 @@ export class DishesService {
     return this.http
       .get<IDish[]>(`${environment.backend_url}/dishes`)
       .pipe(tap((dishes) => this.dishesList$$.next(dishes)));
+  }
+
+  addToSelectedDish(dish: IDish) {
+    this.selectedDish = dish;
+  }
+
+  getDishById(id: string) {
+    return this.http.get<IDish>(`${environment.backend_url}/dish/${id}`);
   }
 }

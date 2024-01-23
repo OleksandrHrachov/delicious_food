@@ -18,7 +18,10 @@ export class CarouselComponent implements OnInit {
       this.slides = dishes.slice(0, 20);
     });
   }
-  
+
+  onSelectDish(dish: IDish) {
+    this.dishesService.addToSelectedDish(dish);
+  }
 
   slideConfig = {
     centerMode: true,

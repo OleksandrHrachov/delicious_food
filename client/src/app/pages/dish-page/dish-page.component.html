@@ -1,1 +1,45 @@
-<p>dish-page works!</p>
+<div class="dish">
+  <div class="dish__inner" *ngIf="selectedDish; else loadingTemplate">
+    <h3 class="dish__inner-title">{{ selectedDish.title }}</h3>
+    <div class="dish__inner-base-info">
+      <img
+        class="dish__inner-base-info-img"
+        src="{{ selectedDish.imageUrl }}"
+        alt="{{ selectedDish.title }}"
+      />
+      <div class="dish__inner-base-info-characteristic">
+        <p><span>category:</span> {{ selectedDish.category }}</p>
+        <p>
+          <span>proteins:</span> {{ selectedDish.nutritionalValue.proteins }}g
+        </p>
+        <p><span>fats:</span> {{ selectedDish.nutritionalValue.fats }}g</p>
+        <p>
+          <span>carbohydrates:</span>
+          {{ selectedDish.nutritionalValue.carbohydrates }}g
+        </p>
+        <p>
+          <span>calories:</span>
+          {{ selectedDish.nutritionalValue.calories }}kcal
+        </p>
+        <p>
+          <span>time:</span> {{ selectedDish.cookingTime
+          }}{{ selectedDish.cookingTime > 1 ? "hours" : "hour" }}
+        </p>
+        <p><span>description:</span> {{ selectedDish.description }}</p>
+      </div>
+    </div>
+    <ul class="dish__inner-steps-list">
+      <li
+        class="dish__inner-steps-list-item"
+        *ngFor="let step of selectedDish.stepDescription; let idx = index"
+      >
+        <p>Step {{ idx + 1 }}:</p>
+        <span>{{ step }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #loadingTemplate>
+    <h3 class="dish__inner-loading">LOADING...</h3>
+  </ng-template>
+</div>
