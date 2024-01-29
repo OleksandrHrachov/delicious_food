@@ -1,8 +1,16 @@
-import { getAllDishes, getDishById } from '../db/dish';
+import { getAllDishes, getAllDishesByCategory, getDishById } from '../db/dish';
 import express from 'express';
 
 export const getDishes = async (req: express.Request, res: express.Response) => {
+  const category = req.query.category as string;
+
   try {
+    if (category) {
+      const categoryDishes = await getAllDishesByCategory(category);
+
+      return res.status(200).json(categoryDishes).end();
+    }
+
     const dishesResult = await getAllDishes();
     
     return res.status(200).json(dishesResult).end();

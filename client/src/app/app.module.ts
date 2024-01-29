@@ -16,6 +16,7 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
 import { DishesPageComponent } from './pages/dishes-page/dishes-page.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { DishPageComponent } from './pages/dish-page/dish-page.component';
+import { DishCardComponent } from './components/dish-card/dish-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DishPageComponent } from './pages/dish-page/dish-page.component';
     ProfilePageComponent,
     DishesPageComponent,
     CarouselComponent,
-    DishPageComponent
+    DishPageComponent,
+    DishCardComponent
   ],
   imports: [
     BrowserModule,

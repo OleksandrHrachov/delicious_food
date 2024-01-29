@@ -1,0 +1,27 @@
+.dishes-page {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 50px 50px;
+  flex-grow: 1;
+
+  &__category-btns {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    &-item {
+      cursor: pointer;
+      padding: 10px;
+      min-width: 50px;
+      color: var(--chestnut-800);
+      border: 1px solid var(--chestnut-400);
+      background-color: var(--chestnut-400);
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: var(--chestnut-300);
+      }
+    }
+  }
+}
