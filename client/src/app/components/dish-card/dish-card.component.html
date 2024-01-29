@@ -1,0 +1,46 @@
+<div class="dish-card">
+  <div class="dish-card__base-info">
+    <div class="dish-card__base-info-left-side">
+      <div class="dish-card__base-info-img-wrapper">
+        <img
+          class="dish-card__base-info-img"
+          src="{{ dishCard.imageUrl }}"
+          alt="{{ dishCard.title }}"
+        />
+      </div>
+
+      <a
+        class="dish-card__base-info-link"
+        [routerLink]="[
+          '../',
+          'dish',
+          dishCard.title.toLocaleLowerCase().split(' ').join('-') +
+            '-' +
+            dishCard._id
+        ]"
+      >
+        view more</a
+      >
+    </div>
+
+    <div class="dish-card__base-info-characteristic">
+      <h3 class="dish-card__base-info-title">{{ dishCard.title }}</h3>
+      <p><span>category:</span> {{ dishCard.category }}</p>
+      <p><span>proteins:</span> {{ dishCard.nutritionalValue.proteins }}g</p>
+      <p><span>fats:</span> {{ dishCard.nutritionalValue.fats }}g</p>
+      <p>
+        <span>carbohydrates:</span>
+        {{ dishCard.nutritionalValue.carbohydrates }}g
+      </p>
+      <p>
+        <span>calories:</span>
+        {{ dishCard.nutritionalValue.calories }}kcal
+      </p>
+      <p>
+        <span>time:</span> {{ dishCard.cookingTime
+        }}{{ dishCard.cookingTime > 1 ? "hours" : "hour" }}
+      </p>
+      <p><span>description:</span> {{ dishCard.description }}</p>
+    </div>
+  </div>
+</div>

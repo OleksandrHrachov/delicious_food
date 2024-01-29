@@ -9,7 +9,13 @@ export interface IDish {
     carbohydrates: number;
     calories: number;
   };
-  category: 'soup' | 'salad' | 'dessert';
+  category: SoupCategory | SaladCategory | DessertCategory;
   stepDescription: string[];
   cookingTime: number;
 }
+
+export type SoupCategory = 'soup';
+export type SaladCategory = 'salad';
+export type DessertCategory = 'dessert';
+
+export type UnionCategory = SoupCategory | SaladCategory | DessertCategory;

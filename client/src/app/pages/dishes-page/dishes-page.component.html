@@ -1,1 +1,23 @@
-<p>dishes-page works!</p>
+<div class="dishes-page">
+  <div class="dishes-page__category-btns">
+    <button
+      (click)="goToCategory('')"
+      class="dishes-page__category-btns-item"
+      type="button"
+    >
+      all
+    </button>
+    <button
+      (click)="goToCategory(category)"
+      class="dishes-page__category-btns-item"
+      type="button"
+      *ngFor="let category of viewCategory; trackBy: trackByCategoryFn"
+    >
+      {{ category }}
+    </button>
+  </div>
+  <app-dish-card
+    *ngFor="let dish of viewDishes; trackBy: trackByDishFn"
+    [dishCard]="dish"
+  ></app-dish-card>
+</div>

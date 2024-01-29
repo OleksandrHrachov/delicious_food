@@ -30,7 +30,8 @@ app-root {
   position: relative;
 }
 
-app-dish-page {
+app-dish-page,
+app-dishes-page {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
