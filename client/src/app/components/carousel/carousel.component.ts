@@ -19,10 +19,6 @@ export class CarouselComponent implements OnInit {
     });
   }
 
-  onSelectDish(dish: IDish) {
-    this.dishesService.addToSelectedDish(dish);
-  }
-
   slideConfig = {
     centerMode: true,
     slidesToShow: 3,
