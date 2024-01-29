@@ -14,24 +14,26 @@ export class DishPageComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private dishesService: DishesService) {
-  }
+    private dishesService: DishesService
+  ) {}
 
   ngOnInit(): void {
+    const dishId = this.activatedRoute.snapshot.params['id'].split('-').pop();
 
-    if (this.dishesService.selectedDish) {
-      this.selectedDish = this.dishesService.selectedDish;
-    } else {
-      const dishId = this.activatedRoute.snapshot.params['id'].split('-').pop();
+    this.dishesService.getDishByIdFromDownloadedList(dishId).subscribe((dish) => {
+      if (dish) {
+        this.selectedDish = dish;
+      }
+    });
 
+    if (!this.selectedDish) {
       try {
-        this.dishesService.getDishById(dishId).subscribe(dish => {
+        this.dishesService.getDishById(dishId).subscribe((dish) => {
           this.selectedDish = dish;
         });
       } catch (error) {
-        console.log('ERROR =>', error)
+        console.log('ERROR =>', error);
       }
     }
   }
-
 }
